@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- באפליקציה - צורה, צבע ועיגול קצוות הפקד TextView הגדרת עיצוב פקד -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+  <!-- צבע רקע ורוד -->
+  <solid android:color="#ffff8386"/>
+  <corners android:radius="30dp"/>
+</shape>

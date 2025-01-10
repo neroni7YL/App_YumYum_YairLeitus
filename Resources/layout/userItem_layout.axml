@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ListViewרשומת משתמש - מופיעה בתור איבר ב -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+	android:background="#ffff464b"
+	android:weightSum="100"
+	>
+	<!-- המכיל את שם המשתמש TextView -->
+	<TextView
+		android:text="username"
+		android:layout_weight="25"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:textColor="#ffffff"
+		android:textSize="13sp"
+		android:id="@+id/userItem_tvUsername"
+	/>
+	<!-- המכיל את סיסמת המשתמש TextView -->
+	<TextView
+		android:text="Password"
+		android:layout_weight="25"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:textColor="#ffffff"
+		android:textSize="13sp"
+		android:id="@+id/userItem_tvPassword"
+	/>
+	<!-- המכיל את השם הפרטי TextView -->
+	<TextView
+		android:text="Name"
+		android:layout_weight="25"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:textColor="#ffffff"
+		android:textSize="13sp"
+		android:id="@+id/userItem_tvName"
+	/>
+	<!-- המכיל את אימייל המשתמש TextView -->
+	<TextView
+		android:text="Email"
+		android:layout_weight="25"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:textColor="#ffffff"
+		android:textSize="13sp"
+		android:id="@+id/userItem_tvEmail"
+	/>
+</LinearLayout>

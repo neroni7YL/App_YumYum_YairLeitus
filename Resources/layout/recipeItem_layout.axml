@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ListViewרשומת מתכון - מופיעה בתור איבר ב -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="160dp"
+	android:orientation="horizontal"
+	android:padding="2dp"
+	android:weightSum="5"
+	>
+	<!-- המכיל את תמונת המתכון ImageView פקד -->
+	<ImageView
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="2"
+		android:src="@drawable/defaultimage"
+		android:scaleType="centerCrop"
+		android:id="@+id/recipeItem_ivRecipeImage"
+	/>
+	<!-- המכיל את פרטי המתכון המופיעים באיבר LinearLayout -->
+	<LinearLayout
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="3"
+		android:orientation="vertical"
+		android:background="#ffef5350"
+		android:weightSum="8.5"
+		>
+		<!-- המכיל את שם המתכון TextView -->
+		<TextView
+			android:text="recipeName"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="3.5"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textSize="15sp"
+			android:background="#66e57373"
+			android:layout_margin="0.5dp"
+			android:id="@+id/recipeItem_tvRecipeName"
+		/>
+		<!-- המכיל את קטגוריות המתכון TextView -->
+		<TextView
+			android:text="category"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="2.5"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textSize="15sp"
+			android:background="#66e57373"
+			android:layout_margin="0.5dp"
+			android:id="@+id/recipeItem_tvCategory"
+		/>
+		<!-- המכיל את סוג המתכון TextView -->
+		<TextView
+			android:text="recipeType"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="2.5"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textSize="15sp"
+			android:background="#66e57373"
+			android:layout_margin="0.5dp"
+			android:id="@+id/recipeItem_tvRecipeType"
+		/>
+	</LinearLayout>
+</LinearLayout>

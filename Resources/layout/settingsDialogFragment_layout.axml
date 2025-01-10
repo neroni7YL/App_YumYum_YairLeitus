@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- דף הגדרות המשתמש -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="#ffffadad"
+	android:gravity="center_horizontal"
+	>
+	<!-- המכיל את כותרת הדף LinearLayout -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_marginBottom="10dp"
+		android:background="#ffd5284a"
+		>
+		<!-- כותרת הדף -->
+		<TextView
+			android:text="Settings"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textSize="20sp"
+		/>
+	</LinearLayout>
+	<!-- לגלילת הדף ScrollView -->
+	<ScrollView
+		android:layout_width="360dp"
+		android:layout_height="match_parent"
+		>
+		<!-- המכיל את פרטי המשתמש LinearLayout -->
+		<LinearLayout	
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:paddingLeft="20dp"
+			android:paddingRight="20dp"
+			>
+			<!-- המראה את השם הפרטי TextView -->
+			<TextView
+				android:text="Welcome :   Name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#ffffffff"
+				android:textSize="18sp"
+				android:layout_gravity="center"
+				android:paddingRight="20dp"
+				android:paddingLeft="20dp"
+				android:paddingTop="3dp"
+				android:paddingBottom="3dp"
+				android:layout_marginBottom="20dp"
+				android:background="@drawable/textviewstyle"
+				android:id="@+id/settingsDialogFragment_tvName"
+			/>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginBottom="10dp"
+				android:layout_marginRight="10dp"
+				android:layout_marginLeft="10dp"
+				android:weightSum="3"
+				>
+				<TextView
+					android:text="Details:"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:textColor="#ff000000"
+					android:textSize="18sp"
+				
+				/>
+				<TextView
+					android:text="Username :"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:textColor="#ff757575"
+					android:textSize="18sp"
+					android:gravity="left"
+				/>
+			</LinearLayout>
+			<!-- המראה את שם המשתמש TextView -->
+			<TextView
+				android:text="username"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#ffffffff"
+				android:textSize="18sp"
+				android:layout_gravity="center"
+				android:paddingRight="20dp"
+				android:paddingLeft="20dp"
+				android:paddingTop="3dp"
+				android:paddingBottom="3dp"
+				android:layout_marginBottom="20dp"
+				android:background="@drawable/textviewstyle"
+				android:id="@+id/settingsDialogFragment_tvUsername"
+			/>
+			<TextView
+				android:text="Email :"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textColor="#ff757575"
+				android:textSize="18sp"
+				android:gravity="center"
+				android:layout_marginBottom="10dp"
+			/>
+			<!-- המראה את האימייל TextView -->
+			<TextView
+				android:text="email"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#ffffffff"
+				android:textSize="18sp"
+				android:layout_gravity="center"
+				android:paddingRight="20dp"
+				android:paddingLeft="20dp"
+				android:paddingTop="3dp"
+				android:paddingBottom="3dp"
+				android:layout_marginBottom="20dp"
+				android:background="@drawable/textviewstyle"
+				android:id="@+id/settingsDialogFragment_tvEmail"
+			/>
+			<TextView
+				android:text="Security question answer :"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textColor="#ff757575"
+				android:textSize="18sp"
+				android:gravity="center"
+				android:layout_marginBottom="10dp"
+			/>
+			<!-- המראה את התשובה על שאלת האבטחה TextView -->
+			<TextView
+				android:text="Answer"
+		     	android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#ffffffff"
+				android:textSize="18sp"
+				android:layout_gravity="center"
+			    android:paddingRight="20dp"
+				android:paddingLeft="20dp"
+				android:paddingTop="3dp"
+				android:paddingBottom="3dp"
+				android:layout_marginBottom="20dp"
+				android:background="@drawable/textviewstyle"
+				android:id="@+id/settingsDialogFragment_tvSecurityQuestion"
+			/>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="80dp"
+				android:orientation="horizontal"
+				android:layout_marginBottom="15dp"
+				android:paddingLeft="30dp"
+				>
+				<!-- לשם שינוי סיסמא EditTextכפתור המראה את ה -->
+				<Button	
+					android:text="Change Password"
+					android:layout_width="180dp"
+					android:layout_height="35dp"
+					android:layout_gravity="center"
+					android:gravity="center"
+					android:textColor="#ffffffff"
+					android:textStyle="bold"
+					android:textSize="14sp"
+					android:background="@drawable/buttonstyle"
+					android:id="@+id/settingsDialogFragment_btnChangePassword"
+				/>
+				<!-- המכיל את תמונת המשתמש CircleImageView -->
+				<refractored.controls.CircleImageView
+					android:layout_width="80dp"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="20dp"
+				    android:src="@drawable/adduserimage"
+					android:id="@+id/settingsDialogFragment_civAddUserImage"
+				/>
+			</LinearLayout>
+			<!-- המכיל את אפשרות שינוי הסיסמא תחילה מוסתר LinearLayout -->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:orientation="horizontal"
+				android:layout_marginBottom="20dp"
+				android:layout_marginRight="20dp"
+				android:layout_marginLeft="20dp"
+				android:visibility="gone"
+				android:id="@+id/settingsDialogFragment_layoutChangePassword"
+				>
+				<!-- של הסיסמא החדשה EditText -->
+				<EditText
+					android:hint="Enter a password"
+					android:inputType="textPassword"
+					android:layout_width="220dp"
+					android:layout_height="match_parent"
+					android:layout_gravity="center"
+					android:textSize="14sp"
+					android:maxLength="16"
+					android:background="@drawable/edittextstyle"
+					android:paddingLeft="20dp"
+					android:paddingRight="20dp"
+					android:layout_marginRight="7dp" 
+					android:singleLine="true"
+					android:id="@+id/settingsDialogFragment_etChangePassword"
+				/>
+				<!-- לשם אישור שינוי הסיסמא שנכתבה ImageButton פקד -->
+				<ImageButton
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:src="@drawable/abc_ic_go_search_api_material"
+					android:background="@drawable/buttonstyle"
+					android:tint="#ffffffff"
+					android:id="@+id/settingsDialogFragment_ibChangePassword"
+				/>
+			</LinearLayout>
+			<!-- כפתור המאשר/מבטל את שירות ההודעות של האפליקציה -->
+			<Button
+				android:text="Allow Notifications"
+				android:layout_width="180dp"
+				android:layout_height="35dp"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:textStyle="bold"
+				android:textSize="14sp"
+				android:textColor="#ff08d025"
+				android:layout_marginBottom="20dp"
+				android:background="@drawable/buttonstyle"
+				android:id="@+id/settingsDialogFragment_btnAllowNotification" 
+			/>
+			<!-- המראה את כמות המתכונים שהמשתמש אוהב TextView -->
+			<TextView
+				android:text="Favorite Recipes :   count"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#ffffffff"
+				android:textSize="18sp"
+				android:layout_gravity="center"
+				android:paddingRight="20dp"
+				android:paddingLeft="20dp"
+				android:paddingTop="3dp"
+				android:paddingBottom="3dp"
+				android:layout_marginBottom="20dp"
+				android:background="@drawable/textviewstyle"
+				android:id="@+id/settingsDialogFragment_tvFavoriteRecipesCount"
+			/>
+			<!-- המראה את כמות המתכונים שהמשתמש יצר TextView -->
+			<TextView
+				android:text="My Recipes :   count"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#ffffffff"
+				android:textSize="18sp"
+				android:layout_gravity="center"
+				android:paddingRight="20dp"
+				android:paddingLeft="20dp"
+				android:paddingTop="3dp"
+				android:paddingBottom="3dp"
+				android:layout_marginBottom="10dp"
+				android:background="@drawable/textviewstyle"
+				android:id="@+id/settingsDialogFragment_tvMyRecipesCount"
+			/>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

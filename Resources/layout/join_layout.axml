@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- דף ההצטרפות לאפליקציה במידה ואין משתמש מחובר במערכת -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="#ffffadad"
+	>
+	<!-- כותרת הדף -->
+	<TextView
+		android:text="YumYum"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:textColor="#ffffffff"
+		android:textStyle="bold"
+		android:textSize="25sp"
+		android:gravity="center"
+		android:background="#ffd5284a"
+	/>
+	<!-- המכיל את תמונת האפליקציה ImageView -->
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="250dp"
+		android:src="@drawable/yumyumimage"
+		android:layout_marginBottom="30dp"
+	/>
+	<!-- טקסט להסבר הדף -->
+	<TextView
+		android:text="Sign in or create an account to view a wide variety of recipes"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textColor="#ffffffff"
+		android:textStyle="bold"
+		android:textSize="20sp"
+		android:gravity="center"
+		android:layout_marginRight="20dp"
+		android:layout_marginLeft="20dp"
+	/>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:gravity="center"
+		android:weightSum="4"
+		>
+		<!-- כפתור למעבר לדף ההתחברות -->
+		<Button
+			android:text="LOGIN"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textStyle="bold"
+			android:textSize="20sp"
+			android:background="@drawable/buttonstyle"
+			android:layout_marginLeft="40dp"
+			android:layout_marginRight="40dp"
+			android:id="@+id/join_btnGotoLogin"
+		/>
+		<!-- כפתור למעבר לדף ההרשמה -->
+		<Button
+			android:text="Sign Up"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textStyle="bold"
+			android:textSize="20sp"
+			android:background="@drawable/buttonstyle"
+			android:layout_marginTop="30dp"
+			android:layout_marginLeft="40dp"
+			android:layout_marginRight="40dp"
+			android:id="@+id/join_btnGotoSignup"
+		/>
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- דף ההתחברות לאפליקציה -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#ffffadad"
+	android:focusableInTouchMode="true"
+	>
+	<!-- כותרת הדף -->
+	<TextView
+		android:text="Login"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_marginBottom="10dp"
+		android:background="#ffd5284a"
+		android:gravity="center"
+		android:textColor="#ffffffff"
+		android:textSize="20sp"
+	/>
+	<TextView
+		android:text="Welcome"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:textColor="#ffffffff"
+		android:textSize="20sp"
+	/>
+	<!-- טקסט להסבר הדף -->
+	<TextView
+		android:text="Enter your credentials to log in"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:textColor="#ffffffff"
+		android:layout_marginTop="10dp"
+	/>
+	<!-- של שם המשתמש EditText שדה -->
+	<EditText
+		android:hint="Username"
+		android:inputType="text"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_gravity="center"
+		android:textSize="15sp"
+		android:maxLength="15"
+		android:background="@drawable/edittextstyle"
+		android:paddingLeft="-3dp"
+		android:paddingRight="30dp"
+		android:layout_marginTop="35dp"
+		android:layout_marginLeft="40dp"
+		android:layout_marginRight="40dp"
+		android:singleLine="true"
+		android:drawableLeft="@drawable/usernameimage"
+		android:drawablePadding="-10dp"
+		android:drawableTint="#ff766767"
+		android:id="@+id/login_etUsername"
+	/>
+	<!-- של הסיסמא EditText שדה -->
+	<EditText
+		android:hint="Password"
+		android:inputType="textPassword"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_gravity="center"
+		android:textSize="15sp"
+		android:maxLength="16"
+		android:background="@drawable/edittextstyle"
+		android:paddingLeft="10dp"
+		android:paddingRight="30dp"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="40dp"
+		android:layout_marginRight="40dp"
+		android:singleLine="true"
+		android:drawableLeft="@drawable/design_password_eye"
+		android:drawablePadding="3dp"
+		android:drawableTint="#ff766767"
+		android:id="@+id/login_etPassword"
+	/>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="35dp"
+		android:layout_marginTop="15dp"
+		android:paddingLeft="43dp"
+		android:paddingRight="42dp"
+		android:weightSum="2"
+		>
+		<!-- האם המשתמש יהיה זכור במערכת בכניסה הבאה - CheckBox פקד -->
+		<CheckBox
+			android:text="Remember Me"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:textColor="#ffffffff"
+			android:textSize="14sp"
+			android:paddingStart="5dp"
+			android:checked="false"
+			android:buttonTint="#ffff6064"
+			android:id="@+id/login_cbRememberMe"
+		/>
+		<!-- כפתור מעבר לדף שכחתי סיסמא -->
+		<Button
+			android:text="Forgot Password?"
+			android:layout_width="0dp"
+			android:layout_height="30dp"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textSize="14sp"
+			android:background="@drawable/buttonstyle"
+			android:id="@+id/login_btnForgotPassword"
+		/>
+	</LinearLayout>
+	<!-- כפתור התחברות ומעבר לדף הבית -->
+	<Button
+		android:text="LOGIN"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:textColor="#ffffffff"
+		android:textStyle="bold"
+		android:textSize="16sp"
+		android:background="@drawable/buttonstyle"
+		android:layout_marginTop="30dp"
+		android:layout_marginLeft="40dp"
+		android:layout_marginRight="40dp"
+		android:id="@+id/login_btnLogin"
+	/>
+	<!-- כפתור מעבר לדף ההרשמה -->
+	<Button
+		android:text="Don't have an account?  Sign Up"
+		android:layout_width="match_parent"
+		android:layout_height="30dp"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:textColor="#ffffffff"
+		android:textSize="15sp"
+		android:background="@drawable/buttonstyle"
+		android:layout_marginTop="25dp"
+		android:layout_marginLeft="60dp"
+		android:layout_marginRight="60dp"
+		android:id="@+id/login_btnGotoSignup"
+	/>
+</LinearLayout>

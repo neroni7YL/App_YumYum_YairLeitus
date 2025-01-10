@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- תפריט המוצג בדף הבית -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- שדה מעבר לבחירת סינון מתכונים -->
+  <item
+    android:id="@+id/homepageMenu_sortBy"
+    android:title="Sort By"/>
+  <!-- שדה מעבר לדף הכנת מתכון -->
+  <item
+    android:id="@+id/homepageMenu_createRecipe"
+    android:title="Create Recipe"/>
+  <!-- שדה מעבר לדף מתכונים אהובים -->
+  <item
+    android:id="@+id/homepageMenu_favoriteRecipes"
+    android:title="Favorite Recipes"/>
+  <!-- שדה מעבר לדף מתכונים שהמשתמש יצר -->
+  <item
+    android:id="@+id/homepageMenu_myRecipes"
+    android:title="My Recipes"/>
+  <!-- שדה לפתיחת הגדרות -->
+  <item
+    android:id="@+id/homepageMenu_settings"
+    android:title="Settings"/>
+  <!-- שדה להתנתקות מהאפליקציה -->
+  <item
+    android:id="@+id/homepageMenu_logout"
+    android:title="Logout"/>
+  <!-- שדה מעבר לדף המשתמשים - למנהלים בלבד -->
+  <item
+    android:id="@+id/homepageMenu_userList"
+    android:title="User List"/>
+</menu>

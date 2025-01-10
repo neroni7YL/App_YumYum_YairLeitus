@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- דף בחירת אמצעי סינון המתכונים -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="#ffffadad"
+	android:gravity="center_horizontal"
+	>
+	<!-- המכיל את כותרת הדף LinearLayout -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_marginBottom="15dp"
+		android:background="#ffd5284a"
+		>
+		<!-- כותרת הדף -->
+		<TextView
+			android:text="Sort By"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textSize="20sp"
+		/>
+	</LinearLayout>
+	<!-- המכיל את כפתורי אפשרויות הסינון השונות לבחירה LinearLayout -->
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="340dp"
+		android:layout_height="match_parent"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:gravity="center"
+			android:weightSum="2"
+			>
+			<!-- כפתור המסנן את המתכונים שבדף אלפביתית -->
+			<Button	
+				android:text="Alphabetically"
+				android:layout_width="0dp"
+				android:layout_height="35dp"
+				android:layout_weight="1"
+				android:textColor="#ffffffff"
+				android:textSize="15sp"
+				android:background="@drawable/buttonstyle"
+				android:layout_marginRight="10dp"
+				android:id="@+id/sortByDialogFragment_alphabetically"
+			/>
+			<!-- כפתור המסנן את המתכונים שבדף לפי כמות המשתמשים שאהבו אותם -->
+			<Button	
+				android:text="Popular"
+				android:layout_width="0dp"
+				android:layout_height="35dp"
+				android:layout_weight="1"
+				android:textColor="#ffffffff"
+				android:textSize="15sp"
+				android:background="@drawable/buttonstyle"
+				android:id="@+id/sortByDialogFragment_popular"
+			/>
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:gravity="center"
+			android:weightSum="2"
+			>
+			<!-- כפתור לסינון לפי קטגוריות הפותח את דף הקטגוריות השונות לבחירה -->
+			<Button	
+				android:text="Categories"
+				android:layout_width="0dp"
+				android:layout_height="35dp"
+				android:layout_weight="1"
+				android:textColor="#ffffffff"
+				android:textSize="15sp"
+				android:background="@drawable/buttonstyle"
+				android:layout_marginRight="10dp"
+				android:id="@+id/sortByDialogFragment_categories"
+			/>
+			<!-- כפתור המסנן את המתכונים שבדף לפי תאריך העלאתם לאפליקציה -->
+			<Button	
+				android:text="New"
+				android:layout_width="0dp"
+				android:layout_height="35dp"
+				android:layout_weight="1"
+				android:textColor="#ffffffff"
+				android:textSize="15sp"
+				android:background="@drawable/buttonstyle"
+				android:id="@+id/sortByDialogFragment_new"
+			/>
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:gravity="center"
+			android:layout_marginBottom="15dp"
+			android:weightSum="2"
+			>
+			<!-- כפתור לסינון לפי פרטי סוג המתכון הפותח את דף סוגי המתכונים השונים לבחירה -->
+			<Button	
+				android:text="Recipe Type"
+				android:layout_width="0dp"
+				android:layout_height="35dp"
+				android:layout_weight="1"
+				android:textColor="#ffffffff"
+				android:textSize="15sp"
+				android:background="@drawable/buttonstyle"
+				android:id="@+id/sortByDialogFragment_recipeType"
+			/>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

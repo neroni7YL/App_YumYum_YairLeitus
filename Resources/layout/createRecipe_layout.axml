@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- דף יצירת מתכון חדש -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#ffffadad"
+	android:focusableInTouchMode="true"
+	>
+	<!-- המכיל את כותרת הדף וכפתור חזרה לדף הבית LinearLayout -->
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_marginBottom="5dp"
+		android:background="#ffd5284a"
+		android:weightSum="12"
+		>
+		<!-- של חץ חזרה וכפתור החזרה ImageView המכיל RelativeLayout -->
+		<RelativeLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="2"
+			>
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="20dp"
+				android:src="@drawable/backbuttonimage"
+				android:layout_centerInParent="true"
+			/>
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@android:color/transparent"
+				android:id="@+id/createRecipe_btnGoBack"
+			/>
+		</RelativeLayout>
+		<!-- כותרת הדף -->
+		<TextView
+			android:text="Create Recipe"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="8"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textSize="20sp"
+		/>
+	</LinearLayout>
+	<!-- לגלילת הדף ScrollView -->
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		>
+		<!-- המכיל את השדות שיש למלא LinearLayout -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="135dp"
+				android:layout_marginLeft="40dp"
+				>
+				<TextView
+					android:text="Add Image:"
+					android:layout_width="120dp"
+					android:layout_height="match_parent"
+					android:layout_gravity="center"
+					android:textColor="#ff757575"
+					android:textSize="18sp"
+					android:gravity="center"
+				/>
+				<!-- המכילה את תמונת המתכון הנבחר ImageView -->
+				<ImageView
+					android:layout_width="150dp"
+					android:layout_height="match_parent"
+					android:src="@drawable/addrecipeimage"
+					android:scaleType="fitXY"
+					android:id="@+id/createRecipe_ivAddRecipeImage"
+				/>
+			</LinearLayout>
+			<!-- של שם המתכון EditText שדה -->
+			<EditText
+				android:hint="Recipe Name"
+				android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:textSize="15sp"
+				android:maxLength="30"
+				android:background="@drawable/edittextstyle"
+				android:paddingLeft="30dp"
+				android:paddingRight="30dp"
+				android:layout_marginTop="20dp"
+				android:layout_marginBottom="15dp"
+				android:layout_marginLeft="40dp"
+				android:layout_marginRight="40dp"
+				android:singleLine="true"
+				android:id="@+id/createRecipe_etRecipeName"
+			/>
+			<TextView
+				android:text="Preparation Time"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textColor="#ff757575"
+				android:textSize="16sp"
+				android:gravity="center"
+				android:layout_marginBottom="10dp"
+			/>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:orientation="horizontal"
+				android:layout_marginLeft="40dp"
+				android:layout_marginRight="40dp"
+				android:weightSum="2"
+				>
+				<!-- של שעות ההכנה EditText שדה -->
+				<EditText
+					android:hint="Hours"
+					android:inputType="number"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:textSize="15sp"
+					android:maxLength="2"
+					android:background="@drawable/edittextstyle"
+					android:layout_marginRight="10dp"
+					android:singleLine="true"
+					android:id="@+id/createRecipe_etHours"
+				/>
+				<!-- של דקות ההכנה EditText שדה -->
+				<EditText
+					android:hint="Minutes"
+					android:inputType="number"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:textSize="15sp"
+					android:maxLength="2"
+					android:background="@drawable/edittextstyle"
+					android:singleLine="true"
+					android:id="@+id/createRecipe_etMinutes"
+				/>
+			</LinearLayout>
+			<!-- המכיל את קטגוריות המתכון TextView -->
+			<TextView
+				android:text="Category(ies)"
+				android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:gravity="center"
+				android:textStyle="bold"
+				android:textSize="15sp"
+				android:background="@drawable/buttonstyle"
+				android:layout_marginTop="20dp"
+				android:layout_marginLeft="40dp"
+				android:layout_marginRight="40dp"
+				android:id="@+id/createRecipe_tvCategory"
+			/>
+			<!-- המכיל את סוג המתכון TextView -->
+			<TextView
+				android:text="Recipe Type"
+				android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:gravity="center"
+				android:textStyle="bold"
+				android:textSize="15sp"
+				android:background="@drawable/buttonstyle"
+				android:layout_marginTop="20dp"
+				android:layout_marginLeft="40dp"
+				android:layout_marginRight="40dp"
+				android:id="@+id/createRecipe_tvRecipeType"
+			/>
+			<!-- המכיל את פרטי סוג המתכון תחילה מוסתר LinearLayout -->
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:visibility="gone"
+				android:id="@+id/createRecipe_layoutRecipeType"
+				>
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:layout_marginTop="20dp"
+					android:weightSum="5"
+					>
+					<!-- כותרת הפרט הראשון -->
+					<TextView
+						android:text="Title 1"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="2"
+						android:textColor="#ff757575"
+						android:textSize="16sp"
+						android:gravity="center"
+						android:id="@+id/createRecipe_tvTypeTitle1"
+					/>
+					<!-- כותרת הפרט השני -->
+					<TextView	
+						android:text="Title 2"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="2"
+						android:textColor="#ff757575"
+						android:textSize="16sp"
+						android:gravity="center"
+						android:id="@+id/createRecipe_tvTypeTitle2"
+					/>
+				</LinearLayout>
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="60dp"
+					android:gravity="center"
+					android:weightSum="5"
+					>
+					<!-- פרט סוג המתכון הראשון -->
+					<TextView	
+						android:text="Detail 1"
+						android:layout_width="0dp"
+						android:layout_height="35dp"
+						android:layout_weight="2"
+						android:textColor="#ffffffff"
+						android:textSize="15sp"
+						android:gravity="center"
+						android:background="@drawable/buttonstyle"
+						android:layout_marginRight="10dp"
+						android:id="@+id/createRecipe_tvTypeDetail1"
+					/>
+					<!-- פרט סוג המתכון השני -->
+					<TextView	
+						android:text="Detail 2"
+						android:layout_width="0dp"
+						android:layout_height="35dp"
+						android:layout_weight="2"
+						android:textColor="#ffffffff"
+						android:textSize="15sp"
+						android:gravity="center"
+						android:background="@drawable/buttonstyle"
+						android:id="@+id/createRecipe_tvTypeDetail2"
+					/>
+				</LinearLayout>
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:layout_marginTop="5dp"
+					android:weightSum="5"
+					>
+					<!-- כותרת הפרט השלישי -->
+					<TextView
+						android:text="Title 3"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="2"
+						android:textColor="#ff757575"
+						android:textSize="16sp"
+						android:gravity="center"
+						android:id="@+id/createRecipe_tvTypeTitle3"
+					/>
+					<!-- כותרת הפרט הרביעי -->
+					<TextView
+						android:text="Title 4"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="2"
+						android:textColor="#ff757575"
+						android:textSize="16sp"
+						android:gravity="center"
+						android:id="@+id/createRecipe_tvTypeTitle4"
+					/>
+				</LinearLayout>
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="60dp"
+					android:gravity="center"
+					android:weightSum="5"
+					>
+					<!-- פרט סוג המתכון השלישי -->
+					<TextView
+						android:text="Detail 3"
+						android:layout_width="0dp"
+						android:layout_height="35dp"
+						android:layout_weight="2"
+						android:textColor="#ffffffff"
+						android:textSize="15sp"
+						android:gravity="center"
+						android:background="@drawable/buttonstyle"
+						android:layout_marginRight="10dp"
+						android:id="@+id/createRecipe_tvTypeDetail3"
+					/>
+					<!-- פרט סוג המתכון הרביעי -->
+					<TextView
+						android:text="Detail 4"
+						android:layout_width="0dp"
+						android:layout_height="35dp"
+						android:layout_weight="2"
+						android:textColor="#ffffffff"
+						android:textSize="15sp"
+						android:gravity="center"
+						android:background="@drawable/buttonstyle"
+						android:id="@+id/createRecipe_tvTypeDetail4"
+					/>
+				</LinearLayout>
+			</LinearLayout>
+			<!-- המכיל את תיאור המתכון EditText שדה -->
+			<EditText
+				android:hint="Description"
+				android:inputType="textMultiLine"
+				android:layout_width="match_parent"
+				android:layout_height="150dp"
+				android:gravity="top"
+				android:textSize="15sp"
+				android:maxLength="400"
+				android:background="@drawable/edittextstyle"
+				android:paddingTop="20dp"
+				android:paddingBottom="20dp"
+				android:paddingLeft="30dp"
+				android:paddingRight="30dp"
+				android:layout_marginTop="20dp"
+				android:layout_marginLeft="40dp"
+				android:layout_marginRight="40dp"
+				android:overScrollMode="always"
+				android:scrollbarStyle="insideInset"
+				android:scrollbars="vertical"
+				android:id="@+id/createRecipe_etDescription"
+			/>
+			<!-- המכיל את מרכיבי המתכון EditText שדה -->
+			<EditText
+				android:hint="Ingredients"
+				android:inputType="textMultiLine"
+				android:layout_width="match_parent"
+				android:layout_height="150dp"
+				android:gravity="top"
+				android:textSize="15sp"
+				android:maxLength="400"
+				android:background="@drawable/edittextstyle"
+				android:paddingTop="20dp"
+				android:paddingBottom="20dp"
+				android:paddingLeft="30dp"
+				android:paddingRight="30dp"
+				android:layout_marginTop="20dp"
+				android:layout_marginLeft="40dp"
+				android:layout_marginRight="40dp"
+				android:overScrollMode="always"
+				android:scrollbarStyle="insideInset"
+				android:scrollbars="vertical"
+				android:id="@+id/createRecipe_etIngredients"
+			/>
+			<!-- המכיל את הוראות הכנת המתכון EditText שדה -->
+			<EditText
+				android:hint="Instructions"
+				android:inputType="textMultiLine"
+				android:layout_width="match_parent"
+				android:layout_height="150dp"
+				android:gravity="top"
+				android:textSize="15sp"
+				android:maxLength="400"
+				android:background="@drawable/edittextstyle"
+				android:paddingTop="20dp"
+				android:paddingBottom="20dp"
+				android:paddingLeft="30dp"
+				android:paddingRight="30dp"
+				android:layout_marginTop="20dp"
+				android:layout_marginLeft="40dp"
+				android:layout_marginRight="40dp"
+				android:overScrollMode="always"
+				android:scrollbarStyle="insideInset"
+				android:scrollbars="vertical"
+				android:id="@+id/createRecipe_etInstructions"
+			/>
+			<!-- כפתור לשמירת נתוני המתכון שנוצר -->
+			<Button
+				android:text="Create Recipe"
+				android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:gravity="center"
+				android:textColor="#ffffffff"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:background="@drawable/buttonstyle"
+				android:layout_marginTop="30dp"
+				android:layout_marginBottom="20dp"
+				android:layout_marginLeft="40dp"
+				android:layout_marginRight="40dp"
+				android:id="@+id/createRecipe_btnCreateRecipe"
+			/>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

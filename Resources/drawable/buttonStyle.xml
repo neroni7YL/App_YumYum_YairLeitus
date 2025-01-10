@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- הגדרת עיצוב כפתור באפליקציה - צורה, צבע ועיגול קצוות הפקד -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+  <!-- צבע רקע כתום -->
+  <solid android:color="#ffff6064"/>
+  <corners android:radius="30dp"/>
+</shape>

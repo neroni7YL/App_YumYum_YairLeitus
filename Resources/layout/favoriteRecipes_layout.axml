@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- דף המתכונים האהובים של המשתמש -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="#ffffadad"
+	android:focusableInTouchMode="true"
+	>
+	<!-- המכיל את כותרת הדף וכפתור חזרה לדף הבית LinearLayout -->
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:background="#ffd5284a"
+		android:weightSum="12"
+		>
+		<!-- של חץ חזרה וכפתור החזרה ImageView המכיל RelativeLayout -->
+		<RelativeLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="2"
+			>
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="20dp"
+				android:src="@drawable/backbuttonimage"
+				android:layout_centerInParent="true"
+			/>
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@android:color/transparent"
+				android:id="@+id/favoriteRecipes_btnGoBack"
+			/>
+		</RelativeLayout>
+		<!-- כותרת הדף -->
+		<TextView
+			android:text="Favorite Recipes"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="8"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textSize="20sp"
+		/>
+	</LinearLayout>
+	<!-- המכיל את סרגל החיפוש והכפתורים השונים LinearLayout -->
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:background="#ffd5284a"
+		android:weightSum="14"
+		>
+		<!-- המהווה סרגל חיפוש המתכונים AutoCompleteTextView פקד -->
+		<AutoCompleteTextView
+			android:hint="Search Recipes..."
+			android:layout_width="0dp"
+			android:layout_height="40dp"
+			android:layout_weight="8"
+			android:layout_gravity="center"
+			android:textSize="15sp"
+			android:maxLength="30"
+			android:background="#ffffffff"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+			android:layout_marginLeft="5dp"
+			android:singleLine="true"
+			android:completionThreshold="1"
+			android:dropDownWidth="match_parent"
+			android:id="@+id/favoriteRecipes_actvSearch"
+		/>
+		<!-- של איקס וכפתור מחיקת הטקסט ImageView המכיל RelativeLayout -->
+		<RelativeLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="2"
+			>
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="20dp"
+				android:src="@drawable/abc_ic_clear_material"
+				android:scaleType="center"
+				android:layout_centerInParent="true"
+			/>
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@android:color/transparent"
+				android:id="@+id/favoriteRecipes_btnClear"
+			/>
+		</RelativeLayout>
+		<!-- של זכוכית מגדלת וכפתור חיפוש מתכון לפי הטקסט ImageView המכיל RelativeLayout -->
+		<RelativeLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="2"
+			>
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="20dp"
+				android:src="@drawable/abc_ic_search_api_material"
+				android:scaleType="center"
+				android:layout_centerInParent="true"
+			/>
+			<Button
+				android:layout_width="match_parent"
+	     		android:layout_height="match_parent"
+				android:background="@android:color/transparent"
+				android:id="@+id/favoriteRecipes_btnSearch"
+			/>
+		</RelativeLayout>
+		<!-- של שלוש נקודות וכפתור פתיחת אפשרויות סינון מתכונים ImageView המכיל RelativeLayout -->
+		<RelativeLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="2"
+			>
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="20dp"
+				android:src="@drawable/abc_ic_menu_overflow_material"
+				android:scaleType="center"
+				android:layout_centerInParent="true"
+			/>
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@android:color/transparent"
+				android:id="@+id/favoriteRecipes_btnSort"
+			/>
+		</RelativeLayout>
+	</LinearLayout>
+	<!-- גוף הדף -->
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:paddingTop="1.5dp"
+		android:paddingBottom="1.5dp"
+		android:paddingLeft="1.5dp"
+		android:paddingRight="1.5dp"
+		>
+		<!-- הכולל בתוכו את כל רשומות המתכונים שהמשתמש אוהב ListView -->
+		<ListView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/favoriteRecipes_lvRecipes"
+		/>
+	</LinearLayout>
+</LinearLayout>

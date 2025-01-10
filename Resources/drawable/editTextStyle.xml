@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- באפליקציה - צורה, צבע ,עיגול קצוות הפקד וצבע הקצוות EditText הגדרת עיצוב פקד -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+  <!-- צבע רקע לבן - ורדרד -->
+  <solid android:color="#4ceeeeee"/>
+  <corners android:radius="30dp"/>
+  <!-- צבע קצוות כתום -->
+  <stroke android:width="2dp" android:color="#ffff6064"/>
+</shape>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- דף המשתמשים - גישה למנהל בלבד -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="#ffffadad"
+	android:focusableInTouchMode="true"
+	>
+	<!-- המכיל את כותרת הדף וכפתור חזרה לדף הבית LinearLayout -->
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:background="#ffd5284a"
+		android:weightSum="12"
+		>
+		<!-- של חץ חזרה וכפתור החזרה ImageView המכיל RelativeLayout -->
+		<RelativeLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="2"
+			>
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="20dp"
+				android:src="@drawable/backbuttonimage"
+				android:layout_centerInParent="true"
+			/>
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@android:color/transparent"
+				android:id="@+id/userList_btnGoBack"
+			/>
+		</RelativeLayout>
+		<!-- כותרת הדף -->
+		<TextView
+			android:text="User List"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="8"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textStyle="bold"
+			android:textSize="25sp"
+		/>
+	</LinearLayout>
+	<!-- המהווה סרגל חיפוש המשתמשים AutoCompleteTextView פקד -->
+	<AutoCompleteTextView
+		android:hint="Search Users..."
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_gravity="center"
+		android:textSize="15sp"
+		android:maxLength="15"
+		android:background="#ffffffff"
+		android:paddingLeft="30dp"
+		android:paddingRight="30dp"
+		android:layout_marginLeft="2dp"
+		android:layout_marginRight="2dp"
+		android:layout_marginTop="2dp"
+		android:layout_marginBottom="2dp"
+		android:singleLine="true"
+		android:completionThreshold="1"
+		android:id="@+id/userList_actvSearch"
+	/>
+	<!-- המכיל את כותרות פרטי המשתמשים LinearLayout -->
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#fff6263f"
+		android:weightSum="100"
+		>
+		<!-- של כותרת שמות המשתמשים TextView פקד -->
+		<TextView
+			android:text="Username"
+			android:layout_weight="25"
+			android:layout_width="0dp"
+			android:layout_height="40dp"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textSize="15sp"
+			android:id="@+id/userList_tvHeaderUsername"
+		/>
+		<!-- של כותרת סיסמאות המשתמשים TextView פקד -->
+		<TextView
+			android:text="Password"
+			android:layout_weight="25"
+			android:layout_width="0dp"
+			android:layout_height="40dp"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textSize="15sp"
+		/>
+		<!-- של כותרת השמות הפרטיים TextView פקד -->
+		<TextView
+			android:text="Name"
+			android:layout_weight="25"
+			android:layout_width="0dp"
+			android:layout_height="40dp"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textSize="15sp"
+		/>
+		<!-- של כותרת האימיילים TextView פקד -->
+		<TextView
+			android:text="Email"
+			android:layout_weight="25"
+			android:layout_width="0dp"
+			android:layout_height="40dp"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textSize="15sp"
+		/>
+	</LinearLayout>
+	<!-- גוף הדף -->
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:paddingTop="1.5dp"
+		android:paddingBottom="1.5dp"
+		android:paddingLeft="1.5dp"
+		android:paddingRight="1.5dp"
+		>
+		<!-- הכולל בתוכו את כל רשומות המשתמשים ListView -->
+		<ListView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/userList_lvUsers"
+			>
+		</ListView>
+	</LinearLayout>
+</LinearLayout>

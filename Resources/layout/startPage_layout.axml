@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- דף טעינת הפתיחה של האפליקציה -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="#ffffadad"
+	>
+	<!-- כותרת הדף -->
+	<TextView
+		android:text="YumYum"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:textColor="#ffffffff"
+		android:textStyle="bold"
+		android:textSize="25sp"
+		android:gravity="center"
+		android:background="#ffd5284a"
+	/>
+	<!-- המכיל את תמונת האפליקציה ImageView -->
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="250dp"
+		android:src="@drawable/yumyumimage"
+	/>
+	<!-- המכיל את הודעה מתאימה לפי סטטוס המשתמש TextView פקד -->
+	<TextView
+		android:text="User Status"
+		android:layout_width="wrap_content"
+		android:layout_height="65dp"
+		android:layout_marginTop="30dp"
+		android:textStyle="italic"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:textSize="25sp"
+		android:paddingLeft="25dp"
+		android:paddingRight="25dp"
+		android:textColor="#ffffffff"
+		android:background="@drawable/textviewstyle"
+		android:id="@+id/startPage_tvStatus"
+	/>
+	<!-- המסתובב עד למעבר לדף הבית או לדף ההצטרפות ProgressBar פקד -->
+	<ProgressBar
+		android:layout_width="match_parent"
+		android:layout_height="80dp"
+		android:layout_marginTop="100dp"
+		android:indeterminateTint="#ffec407a"
+	/>
+</LinearLayout>

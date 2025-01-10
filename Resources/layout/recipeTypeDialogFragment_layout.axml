@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- דף בחירת סוג מתכון -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="#ffffadad"
+	android:gravity="center_horizontal"
+	>
+	<!-- המכיל את כותרת הדף LinearLayout -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_marginBottom="15dp"
+		android:background="#ffd5284a"
+		>
+		<!-- כותרת הדף -->
+		<TextView
+			android:text="Choose Recipe Type"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:textColor="#ffffffff"
+			android:textSize="20sp"
+		/>
+	</LinearLayout>
+	<!-- המכיל את כפתורי סוגי המתכונים השונים לבחירה LinearLayout -->
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="340dp"
+		android:layout_height="match_parent"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:gravity="center"
+			android:weightSum="2"
+			>
+			<!-- כפתור הפותח את דף פרטי הסלט -->
+			<Button
+				android:text="Salad"
+				android:layout_width="0dp"
+				android:layout_height="35dp"
+				android:layout_weight="1"
+				android:textColor="#ffffffff"
+				android:textSize="15sp"
+				android:background="@drawable/buttonstyle"
+				android:layout_marginRight="10dp"
+				android:id="@+id/recipeTypeDialogFragment_btnSalad"
+			/>
+			<!-- כפתור הפותח את דף פרטי המרק -->
+			<Button
+				android:text="Soup"
+				android:layout_width="0dp"
+				android:layout_height="35dp"
+				android:layout_weight="1"
+				android:textColor="#ffffffff"
+				android:textSize="15sp"
+				android:background="@drawable/buttonstyle"
+				android:id="@+id/recipeTypeDialogFragment_btnSoup"
+			/>
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:gravity="center"
+			android:layout_marginBottom="15dp"
+			android:weightSum="2"
+			>
+			<!-- כפתור הפותח את דף פרטי מנת הבשר -->
+			<Button
+				android:text="Meat"
+				android:layout_width="0dp"
+				android:layout_height="35dp"
+				android:layout_weight="1"
+				android:textColor="#ffffffff"
+				android:textSize="15sp"
+				android:background="@drawable/buttonstyle"
+				android:layout_marginRight="10dp"
+				android:id="@+id/recipeTypeDialogFragment_btnMeat"
+			/>
+			<!-- כפתור הפותח את דף פרטי המאפה -->
+			<Button
+				android:text="Pastry"
+				android:layout_width="0dp"
+				android:layout_height="35dp"
+				android:layout_weight="1"
+				android:textColor="#ffffffff"
+				android:textSize="15sp"
+				android:background="@drawable/buttonstyle"
+				android:id="@+id/recipeTypeDialogFragment_btnPastry"
+			/>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>
